@@ -1,0 +1,47 @@
+.todo-list-item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #0000000d;
+
+  &__checkbox {
+    margin-right: 12px;
+  }
+
+  &__label {
+    color: #000;
+
+    &--completed {
+      color: #8a8a8a;
+      text-decoration: line-through;
+    }
+
+    margin-right: auto;
+  }
+
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    justify-self: flex-end;
+    min-width: 16px;
+    min-height: 16px;
+
+    &--completed {
+      svg {
+        path {
+          stroke: #8a8a8a;
+        }
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          transition: all 0.25s;
+          stroke: #d83131;
+        }
+      }
+    }
+  }
+}

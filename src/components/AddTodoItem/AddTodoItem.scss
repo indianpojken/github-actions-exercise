@@ -1,0 +1,49 @@
+@use '../../scss/typography';
+
+.add-todo-item {
+  display: flex;
+
+  &__set-text {
+    flex: 1;
+    border: none;
+
+    font-size: typography.$bigText;
+
+    color: #eeeeee;
+    background-color: #222222;
+
+    padding: 0 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+
+  button {
+    all: unset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #3fc08a;
+
+    min-width: 64px;
+    max-width: 64px;
+
+    min-height: 64px;
+    max-height: 64px;
+
+    &:hover {
+      svg {
+        transition: all 0.5s;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

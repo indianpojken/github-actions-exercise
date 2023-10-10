@@ -1,0 +1,74 @@
+@use './scss/typography';
+
+:root {
+  font-family: typography.$font;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #eee;
+}
+
+.app {
+  position: relative;
+}
+
+#root {
+  display: flex;
+  min-width: 375px;
+  max-width: 375px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 64px 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+  flex: 1;
+
+  background-color: #fff;
+
+  > header {
+    grid-area: 'header';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f82c0;
+  }
+
+  > main {
+    grid-area: 'main';
+    overflow-y: auto;
+  }
+
+  > footer {
+    grid-area: 'footer';
+  }
+}
+
+h1 {
+  color: #ffffff;
+  font-family: typography.$fontLogo;
+  font-size: typography.$bigText;
+}
