@@ -60,6 +60,7 @@ body {
   > main {
     grid-area: 'main';
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   > footer {
